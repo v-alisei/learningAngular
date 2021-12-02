@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learningAngular';
+  userList = [
+    {
+      firstName: 'Ivan',
+      lastName: 'Petrovich',
+      age: 24,
+    },
+    {
+      firstName: 'Fedor',
+      lastName: 'Ivanov',
+      age: 20,
+    },
+    {
+      firstName: 'Petr',
+      lastName: 'Lisichkin',
+      age: 22,
+    },
+  ]
 }
