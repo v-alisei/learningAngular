@@ -7,8 +7,5 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  test():void{
-    console.log("hiiiiiiiiiii")
-  }
-  title = 'learningAngular';
+  message = "hiiiiiii"
 }
