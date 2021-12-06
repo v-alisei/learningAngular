@@ -1,1 +1,1 @@
-<app-user-list-element *ngFor = "let user of userList" [user]="user"></app-user-list-element>
+<app-user-list-element *ngFor = "let user of userList" [user]="user" (delete)="delete($event)"></app-user-list-element>

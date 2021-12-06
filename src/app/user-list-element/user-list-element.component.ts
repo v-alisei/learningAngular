@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-list-element',
@@ -10,7 +10,9 @@ export class UserListElementComponent{
     lastName: '',
     age: 0,
   }
-  delete(){
-    
+  onDelete(){
+    this.delete.emit(this.user)
   }
+  @Output() delete = new EventEmitter<Object>();
+
 }
