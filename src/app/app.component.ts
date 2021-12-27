@@ -7,12 +7,9 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  sbj:BehaviorSubject<number>
-  constructor(){ 
-    this.sbj = new BehaviorSubject<number>(0);
-    this.sbj.subscribe(this.log)
-  }
+  sbj:BehaviorSubject<number> = new BehaviorSubject<number>(0);
   ngOnInit() {
+    this.sbj.subscribe(this.log)
     setInterval(()=>{this.sbj.next(Math.random()*1000)}, 200)
   }
   log(n:number){
